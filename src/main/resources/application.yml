@@ -1,5 +1,10 @@
 server:
-  port: 9999
+  port: 8443
+  ssl:
+# $JAVA_HOME/bin/keytool -genkey -alias euler -keyalg RSA -keypass changeit -storepass changeit -keystore ./keystore.jks
+    key-store: classpath:keystore.jks
+    key-store-password: changeit
+    key-password: changeit
   compression:
     enabled: true
     mime-types: application/json,application/xml,text/html,text/xml,text/plain,image/jpeg
