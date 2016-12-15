@@ -7,11 +7,10 @@ server:
 screencast:
   output:
     imageCompression: 20 #Level for compression. 0 is the lowest compression, 100 the highest. Only works with JPG output type
-    refreshIntervalMillis: 10000
-  mouse:
-    draw: true
-    width: 7
-    height: 7
-    path: /path/to/image
-    borderColor: "000000"
-    fillColor: "FF0000"
+    refreshIntervalMillis: 100
+  mouse: #Config for the mouspointer display
+    draw: true #Defines if the pointer should be shown or not. Allowed values: true (Show courser), false (Do not show courser)
+    width: 7 #Width of the oval displaying the cursor in pixel
+    height: 7 #Height of the oval displaying the cursor in pixel
+    borderColor: "000000" #HEX color code for the courser border (outer 1px of the cursor)
+    fillColor: "FF0000" #HEX color code for the cursor fill
