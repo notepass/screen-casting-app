@@ -1,5 +1,6 @@
 package de.asw.apps.screencast;
 
+import de.asw.apps.screencast.util.ImageUtil;
 import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
@@ -35,13 +36,6 @@ class ScreenGrabber {
   }
 
   byte[] grabAsBytes() {
-
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(1024 * 400);
-    try {
-      ImageIO.write(grab(), "jpg", baos);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    return baos.toByteArray();
+    return ImageUtil.bufferedImageToByte(grab(), ImageUtil.OutputFormat.JPG);
   }
 }

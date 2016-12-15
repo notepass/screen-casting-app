@@ -5,4 +5,13 @@ server:
     mime-types: application/json,application/xml,text/html,text/xml,text/plain,image/jpeg
 
 screencast:
-  refreshIntervalMillis: 250
+  output:
+    imageCompression: 20 #Level for compression. 0 is the lowest compression, 100 the highest. Only works with JPG output type
+    refreshIntervalMillis: 10000
+  mouse:
+    draw: true
+    width: 7
+    height: 7
+    path: /path/to/image
+    borderColor: "000000"
+    fillColor: "FF0000"
